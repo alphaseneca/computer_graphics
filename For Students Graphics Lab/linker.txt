@@ -1,0 +1,24 @@
+-lbgi
+-lgdi32
+-lcomdlg32
+-luuid
+-loleaut32
+-lole32
+
+
+//test program
+
+#include <graphics.h>
+#include <iostream>
+using namespace std;
+
+int main(){
+	initwindow(800,600);
+	circle(200,300,600);
+	while(!kbhit());
+	closegraph();
+	return 0;
+}
+
+
+https://www.youtube.com/watch?v=TEMhWt9WwTA&ab_channel=Reecry
