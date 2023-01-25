@@ -1,5 +1,5 @@
 [Project]
-FileName=task4.dev
+FileName=task5.dev
 Name=Project1
 Type=1
 Ver=2
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=task4.cpp
+FileName=task5.cpp
 CompileCpp=1
 Folder=
 Compile=1

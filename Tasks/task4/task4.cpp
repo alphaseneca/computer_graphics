@@ -20,14 +20,14 @@ void ellipse(int xc, int yc , int rx, int ry){
 			y-=1;
 			p1+=2*ry*ry*x+ry*ry-2*rx*rx*y;
 		}
-		putpixel(xc+x,yc+y,5);
+		putpixel(xc+x,yc+y,1);
 //		delay(500);
-		putpixel(xc+x,yc-y,6);
+		putpixel(xc+x,yc-y,2);
 //		delay(500);
-		putpixel(xc-x,yc+y,7);
+		putpixel(xc-x,yc+y,3);
 //		delay(500);
-		putpixel(xc-x,yc-y,8);
-		delay(.002);
+		putpixel(xc-x,yc-y,4);
+	//	delay(.002);
 	}
 	int p2 = ry*ry*(x+1/2)*(x+1/2)+rx*rx*(y-1)*(y-1)-rx*rx*ry*ry;
 	
@@ -48,7 +48,7 @@ void ellipse(int xc, int yc , int rx, int ry){
 		putpixel(xc-x,yc+y,7);
 //		delay(500);
 		putpixel(xc-x,yc-y,8);
-		delay(.002);
+	//	delay(.0002);
 	}
 }
 
@@ -69,7 +69,7 @@ int main(){
 		initwindow(900,900,"cylinder using ellipse");
 //	int i;
 	for(int i=0;i<=h;i++){
-		ellipse(xc+i,yc+i,rx,ry);
+		ellipse(xc,yc+i,rx,ry);
 	}
 	
 	getch();
