@@ -1,6 +1,6 @@
 [Project]
-FileName=task4.dev
-Name=task4
+FileName=task6.dev
+Name=task6
 Type=1
 Ver=2
 ObjFiles=
@@ -19,7 +19,7 @@ ObjectOutput=
 LogOutput=
 LogOutputEnabled=0
 OverrideOutput=0
-OverrideOutputName=task4.exe
+OverrideOutputName=task6.exe
 HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=task4.cpp
+FileName=task6.cpp
 CompileCpp=1
 Folder=
 Compile=1
