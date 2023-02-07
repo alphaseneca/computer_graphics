@@ -11,8 +11,8 @@
 #include <conio.h>
 
 int X0, Y0;
-int sx, sy;
-int angle;
+float sx, sy;
+float angle;
 int choose;
 
 using namespace std;
@@ -57,7 +57,7 @@ void translation(int x1, int y1, int x2, int y2, int x3, int y3, int tx, int ty)
 	plot(x1, y1, x2, y2, x3, y3);
 }
 
-void scaling(int x1, int y1, int x2, int y2, int x3, int y3, int sx, int sy)
+void scaling(int x1, int y1, int x2, int y2, int x3, int y3, float sx, float sy)
 {
 	x1 = sx * x1;
 	y1 = sy * y1;
@@ -69,17 +69,17 @@ void scaling(int x1, int y1, int x2, int y2, int x3, int y3, int sx, int sy)
 	translation(x1, y1, x2, y2, x3, y3, X0, Y0);
 }
 
-void rotation(int x1, int y1, int x2, int y2, int x3, int y3, int a)
+void rotation(int x1, int y1, int x2, int y2, int x3, int y3, float a)
 {
 
-	int xr1 = floor((x1 * cos(a * 3.14 / 180)) + (y1 * sin(a * 3.14 / 180)));
-	int yr1 = floor((-x1 * sin(a * 3.14 / 180)) + (y1 * cos(a * 3.14 / 180)));
+	int xr1 = floor((x1 * cos(a * 3.14 / 180)) - (y1 * sin(a * 3.14 / 180)));
+	int yr1 = floor((x1 * sin(a * 3.14 / 180)) + (y1 * cos(a * 3.14 / 180)));
 
-	int xr2 = floor((x2 * cos(a * 3.14 / 180)) + (y2 * sin(a * 3.14 / 180)));
-	int yr2 = floor((-x2 * sin(a * 3.14 / 180)) + (y2 * cos(a * 3.14 / 180)));
+	int xr2 = floor((x2 * cos(a * 3.14 / 180)) - (y2 * sin(a * 3.14 / 180)));
+	int yr2 = floor((x2 * sin(a * 3.14 / 180)) + (y2 * cos(a * 3.14 / 180)));
 
-	int xr3 = floor((x3 * cos(a * 3.14 / 180)) + (y3 * sin(a * 3.14 / 180)));
-	int yr3 = floor((-x3 * sin(a * 3.14 / 180)) + (y3 * cos(a * 3.14 / 180)));
+	int xr3 = floor((x3 * cos(a * 3.14 / 180)) - (y3 * sin(a * 3.14 / 180)));
+	int yr3 = floor((x3 * sin(a * 3.14 / 180)) + (y3 * cos(a * 3.14 / 180)));
 
 	translation(xr1, yr1, xr2, yr2, xr3, yr3, X0, Y0);
 }
@@ -97,13 +97,13 @@ void inverse_translation(int x1, int y1, int x2, int y2, int x3, int y3, int tx,
 
 	if (choose == 1)
 	{
-		plot(x1, y1, x2, y2, x3, y3);
+		//plot(x1, y1, x2, y2, x3, y3);
 		scaling(x1, y1, x2, y2, x3, y3, sx, sy);
 	}
 
 	else if (choose == 2)
 	{
-		plot(x1, y1, x2, y2, x3, y3);
+		//plot(x1, y1, x2, y2, x3, y3);
 		rotation(x1, y1, x2, y2, x3, y3, angle);
 	}
 }
@@ -134,9 +134,10 @@ int main()
 	cout << "Enter the coordinates of the triangle: " << endl;
 	cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 	cout << endl;
-	// x1=100;y1=100; x2=210;y2=100;x3=270;y3=300;
+
 
 	initwindow(500, 500);
+	
 	plot(x1, y1, x2, y2, x3, y3);
 
 	cout << "What do you want to perform ?" << endl;
