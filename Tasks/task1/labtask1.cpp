@@ -9,11 +9,11 @@ using namespace std;
 int main()
 {
     float x, y, x1, y1, x2, y2, dx, dy, step, xincr, yincr;
-    initwindow(400, 400, "DDA Algorithm");
-    cout << "Enter the value of x1 and y1";
+    initwindow(400, 400, "DDA Line Drawing Algorithm");
+    cout << "Enter the value of x1 and y1 "<<endl;
     cin >> x1 >> y1;
-    cout << "Enter the value of x2 and y2";
-    cin >> x2, y2;
+    cout << "Enter the value of x2 and y2 "<<endl;
+    cin >> x2 >> y2;
     x = x1;
     y = y1;
     dx = x2 - x1;
